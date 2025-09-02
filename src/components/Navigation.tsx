@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +13,33 @@ const Navigation = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -24,89 +51,95 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { label: "Главная", id: "hero" },
-    { label: "О нас", id: "about" },
-    { label: "Услуги", id: "services" },
-    { label: "Отзывы", id: "testimonials" },
-    { label: "Контакты", id: "contacts" },
+    { label: "Головна_", id: "hero" },
+    { label: "Про нас_", id: "about" },
+    { label: "Послуги_", id: "services" },
+    { label: "Статті_", id: "articles" },
+    { label: "Відгуки_", id: "testimonials" },
+    { label: "Контакти_", id: "contacts" },
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-background/95 backdrop-blur-sm shadow-lg" 
-          : "bg-transparent"
-      }`}
+    <div
+      className="z-50 bg-white w-full opacity-100 relative"
+      ref={headerRef}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <nav className="z-50 bg-white max-w-full opacity-100 rounded-none border-0 lg:border-b lg:border-black py-0 md:shadow-none" style={{ borderWidth: '0 0 1px 0' }}>
+        <div className={`flex justify-around md:justify-between w-full max-w-[1350px] h-[60px] mx-auto items-center px-4 md:px-6 ${isMobileMenuOpen ? 'border-b border-black' : ''}`}>
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">Д</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">Дентал Клиник</span>
-          </div>
+          <button
+            onClick={() => scrollToSection("hero")}
+            className="text-2xl md:text-3xl font-bold text-black hover:text-red-600 transition-colors"
+          >
+            ДЕНТАЛ_
+          </button>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+          <div className="hidden md:flex flex-row space-x-3 lg:space-x-6 xl:space-x-8 xl:mr-4">
+            {navItems.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-[14px] lg:text-[16px] xl:text-[18px] h-[38px] text-black hover:text-red-600 transition-colors duration-200 font-normal uppercase group whitespace-nowrap"
               >
                 {item.label}
+                <span className="group-hover:animate-blink text-2xl lg:text-3xl font-bold relative bottom-[2px] lg:bottom-[3px] opacity-0 group-hover:opacity-100">
+                  _
+                </span>
               </button>
             ))}
-            <Button
+            
+            <button
               onClick={() => scrollToSection("booking")}
-              className="rounded-full bg-primary hover:bg-primary/90"
+              className="bg-black hover:bg-red-600 text-white w-[180px] lg:w-[200px] xl:w-[210px] h-[38px] tracking-wide rounded-none uppercase text-[14px] lg:text-[16px] xl:text-[18px] font-normal transition-all duration-300 whitespace-nowrap"
             >
-              Записаться
-            </Button>
+              Записатися_
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-black hover:text-red-600 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-foreground" />
+              <X className="w-6 h-6" />
             ) : (
-              <Menu className="w-6 h-6 text-foreground" />
+              <Menu className="w-6 h-6" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-background/95 backdrop-blur-sm rounded-lg shadow-lg">
-            <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <button
+          <div className="md:hidden">
+            <ul className="flex flex-col w-full bg-white z-50 border-t border-black">
+              {navItems.map((item, index) => (
+                <li
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium py-2 px-4 text-left"
+                  className="font-medium border-b border-black"
                 >
-                  {item.label}
-                </button>
+                  <button
+                    onClick={() => scrollToSection(item.id)}
+                    className="w-full h-[50px] px-6 text-left text-black hover:text-red-600 transition-colors"
+                  >
+                    {item.label}
+                  </button>
+                </li>
               ))}
-              <div className="px-4 pt-2">
-                <Button
+              <li className="font-medium">
+                <button
                   onClick={() => scrollToSection("booking")}
-                  className="w-full rounded-full bg-primary hover:bg-primary/90"
+                  className="w-full h-[50px] bg-black text-white hover:bg-red-600 transition-colors"
                 >
-                  Записаться
-                </Button>
-              </div>
-            </div>
+                  Записатися_
+                </button>
+              </li>
+            </ul>
           </div>
         )}
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 

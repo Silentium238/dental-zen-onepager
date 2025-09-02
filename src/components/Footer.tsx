@@ -1,104 +1,56 @@
-import { Heart, Phone, Mail, MapPin } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Heart } from "lucide-react";
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <footer className="bg-foreground text-background py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8">
+    <footer className="bg-black text-white py-8 md:py-12">
+      <div className="max-w-[1350px] mx-auto px-4 md:px-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {/* Logo and Description */}
-          <div className="md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">Д</span>
-              </div>
-              <span className="text-xl font-bold">Дентал Клиник</span>
-            </div>
-            <p className="text-background/80 leading-relaxed mb-6 max-w-md">
-              Современная стоматологическая клиника с индивидуальным подходом к каждому пациенту. 
-              Мы заботимся о здоровье ваших зубов уже более 15 лет.
+          <div className="sm:col-span-2">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">ДЕНТАЛ_</h3>
+            <p className="text-white/80 mb-3 md:mb-4 leading-tight tracking-normal font-normal text-sm md:text-base">
+              Ваша надійна стоматологічна клініка в Києві. Ми пропонуємо повний спектр стоматологічних послуг 
+              з використанням сучасних технологій та досвідчених спеціалістів.
             </p>
-            <div className="flex items-center space-x-1 text-sm text-background/70">
-              <span>Сделано с</span>
-              <Heart className="w-4 h-4 text-red-400 fill-red-400" />
-              <span>для ваших улыбок</span>
+            <div className="flex items-center text-white/80 text-sm md:text-base">
+              <span>Зроблено з</span>
+              <Heart className="w-4 h-4 mx-2 text-red-600 fill-red-600" />
+              <span>для вашої посмішки</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Быстрые ссылки</h3>
-            <div className="space-y-2">
-              {[
-                { label: "О нас", id: "about" },
-                { label: "Услуги", id: "services" },
-                { label: "Отзывы", id: "testimonials" },
-                { label: "Контакты", id: "contacts" },
-                { label: "Записаться", id: "booking" }
-              ].map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => {
-                    const section = document.getElementById(link.id);
-                    if (section) {
-                      section.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                  className="block text-background/80 hover:text-primary transition-colors duration-200"
-                >
-                  {link.label}
-                </button>
-              ))}
-            </div>
+            <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 uppercase">Швидкі посилання</h4>
+            <ul className="space-y-2">
+              <li><a href="#about" className="text-white/80 hover:text-red-600 transition-colors text-sm md:text-base">Про нас</a></li>
+              <li><a href="#services" className="text-white/80 hover:text-red-600 transition-colors text-sm md:text-base">Послуги</a></li>
+              <li><a href="#articles" className="text-white/80 hover:text-red-600 transition-colors text-sm md:text-base">Статті</a></li>
+              <li><a href="#testimonials" className="text-white/80 hover:text-red-600 transition-colors text-sm md:text-base">Відгуки</a></li>
+              <li><a href="#contacts" className="text-white/80 hover:text-red-600 transition-colors text-sm md:text-base">Контакти</a></li>
+            </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Контакты</h3>
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-background/80 text-sm">
-                  г. Москва, ул. Примерная, д. 123
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a 
-                  href="tel:+74951234567" 
-                  className="text-background/80 hover:text-primary transition-colors text-sm"
-                >
-                  +7 (495) 123-45-67
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a 
-                  href="mailto:info@dentalclinic.ru" 
-                  className="text-background/80 hover:text-primary transition-colors text-sm"
-                >
-                  info@dentalclinic.ru
-                </a>
-              </div>
+            <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 uppercase">Контакти</h4>
+            <div className="space-y-2 text-white/80 text-sm md:text-base">
+              <p>м. Київ, вул. Хрещатик, 1</p>
+              <p>ТЦ "Медичний", 2 поверх</p>
+              <p className="hover:text-red-600 transition-colors">
+                <a href="tel:+380441234567">+38 (044) 123-45-67</a>
+              </p>
+              <p className="hover:text-red-600 transition-colors">
+                <a href="mailto:info@dentalclinic.ua">info@dentalclinic.ua</a>
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-background/20 mt-12 pt-8 text-center">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-background/60 text-sm">
-              © 2024 Дентал Клиник. Все права защищены.
-            </p>
-            <button
-              onClick={scrollToTop}
-              className="text-background/60 hover:text-primary transition-colors text-sm"
-            >
-              Наверх ↑
-            </button>
-          </div>
+        {/* Bottom Bar */}
+        <div className="border-t border-white/20 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-white/60">
+          <p className="text-xs md:text-sm">&copy; 2024 Дентал Клінік. Всі права захищені.</p>
         </div>
       </div>
     </footer>

@@ -11,71 +11,71 @@ import {
 const services = [
   {
     icon: Stethoscope,
-    title: "Лечение зубов",
-    description: "Современные методы лечения кариеса, пульпита и других заболеваний зубов с использованием безболезненных технологий.",
-    color: "text-primary"
+    title: "Лікування зубів",
+    description: "Сучасні методи лікування карієсу, пульпіту та інших захворювань зубів з використанням безболісних технологій.",
+    color: "text-red-600"
   },
   {
     icon: Sparkles,
-    title: "Профессиональная чистка",
-    description: "Удаление зубного камня и налета, полировка зубов для поддержания здоровья полости рта.",
-    color: "text-secondary-foreground"
+    title: "Професійна чистка",
+    description: "Видалення зубного каменю та нальоту, полірування зубів для підтримки здоров'я порожнини рота.",
+    color: "text-black"
   },
   {
     icon: Heart,
-    title: "Имплантация зубов",
-    description: "Установка качественных имплантов для восстановления утраченных зубов с гарантией на долгие годы.",
-    color: "text-accent-foreground"
+    title: "Імплантація зубів",
+    description: "Встановлення якісних імплантів для відновлення втрачених зубів з гарантією на довгі роки.",
+    color: "text-red-600"
   },
   {
     icon: Smile,
-    title: "Отбеливание зубов",
-    description: "Безопасное профессиональное отбеливание для создания красивой белоснежной улыбки.",
-    color: "text-primary"
+    title: "Відбілювання зубів",
+    description: "Безпечне професійне відбілювання для створення красивої білосніжної посмішки.",
+    color: "text-black"
   },
   {
     icon: Shield,
-    title: "Протезирование",
-    description: "Изготовление коронок, мостов и съемных протезов для восстановления функции жевания.",
-    color: "text-secondary-foreground"
+    title: "Протезування",
+    description: "Виготовлення коронок, мостів та знімних протезів для відновлення функції жування.",
+    color: "text-red-600"
   },
   {
     icon: Zap,
-    title: "Детская стоматология",
-    description: "Специализированный подход к лечению детей с комфортной и дружелюбной атмосферой.",
-    color: "text-accent-foreground"
+    title: "Дитяча стоматологія",
+    description: "Спеціалізований підхід до лікування дітей з комфортною та дружньою атмосферою.",
+    color: "text-black"
   }
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-6">Наши услуги</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Полный спектр стоматологических услуг для поддержания здоровья ваших зубов и создания красивой улыбки.
+    <section id="services" className="py-12 md:py-20 bg-white">
+      <div className="max-w-[1350px] mx-auto px-4 md:px-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl tracking-tighter text-black mb-4 md:mb-6 uppercase">Наші послуги</h2>
+          <p className="text-base sm:text-lg text-black max-w-[435px] mx-auto leading-tight tracking-normal font-normal">
+            Повний спектр стоматологічних послуг для підтримки здоров'я ваших зубів та створення красивої посмішки.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <Card 
                 key={index} 
-                className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-2 bg-card"
+                className="border border-black shadow-none hover:border-red-600 transition-all duration-300 bg-white rounded-none"
               >
                 <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-4 bg-muted rounded-full w-16 h-16 flex items-center justify-center">
-                    <IconComponent className={`w-8 h-8 ${service.color}`} />
+                  <div className="mx-auto mb-4 p-3 md:p-4 bg-black rounded-none w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
+                    <IconComponent className={`w-6 h-6 md:w-8 md:h-8 text-white`} />
                   </div>
-                  <CardTitle className="text-xl font-semibold text-foreground">
+                  <CardTitle className="text-lg md:text-xl font-semibold text-black uppercase">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-black leading-tight tracking-normal font-normal">
                     {service.description}
                   </p>
                 </CardContent>

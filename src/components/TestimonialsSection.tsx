@@ -8,70 +8,70 @@ const testimonials = [
     name: "Анна М.",
     image: patient1,
     rating: 5,
-    text: "Прекрасная клиника! Врачи очень внимательные и профессиональные. Лечение прошло абсолютно безболезненно. Теперь обращаюсь только сюда!"
+    text: "Чудова клініка! Лікарі дуже уважні та професійні. Лікування пройшло абсолютно безболісно. Тепер звертаюся тільки сюди!"
   },
   {
-    name: "Михаил К.",
+    name: "Михайло К.",
     image: patient2,
     rating: 5,
-    text: "Делал имплантацию зубов. Очень доволен результатом! Современное оборудование, квалифицированные врачи. Рекомендую всем!"
+    text: "Робив імплантацію зубів. Дуже задоволений результатом! Сучасне обладнання, кваліфіковані лікарі. Рекомендую всім!"
   },
   {
-    name: "Елена Р.",
+    name: "Олена Р.",
     image: null,
     rating: 5,
-    text: "Отличный сервис и качество лечения. Особенно понравилась профессиональная чистка зубов. Персонал очень дружелюбный и заботливый."
+    text: "Відмінний сервіс та якість лікування. Особливо сподобалася професійна чистка зубів. Персонал дуже дружній та турботливий."
   }
 ];
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20 bg-muted">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-6">Отзывы наших пациентов</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Мы гордимся доверием наших пациентов и стремимся превзойти их ожидания каждый день.
+    <section id="testimonials" className="py-12 md:py-20 bg-white">
+      <div className="max-w-[1350px] mx-auto px-4 md:px-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl tracking-tighter text-black mb-4 md:mb-6 uppercase">Відгуки наших пацієнтів</h2>
+          <p className="text-base sm:text-lg text-black max-w-[435px] mx-auto leading-tight tracking-normal font-normal">
+            Ми пишаємося довірою наших пацієнтів та прагнемо перевершити їх очікування кожного дня.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className="border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-background"
+              className="border border-black shadow-none bg-white rounded-none"
             >
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-6 md:p-8 text-center">
                 {/* Stars */}
-                <div className="flex justify-center mb-6">
+                <div className="flex justify-center mb-4 md:mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                    <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-red-600 text-red-600" />
                   ))}
                 </div>
 
                 {/* Testimonial Text */}
-                <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                <p className="text-black mb-4 md:mb-6 leading-tight tracking-normal font-normal italic text-sm sm:text-base">
                   "{testimonial.text}"
                 </p>
 
                 {/* Patient Info */}
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex items-center justify-center space-x-3 md:space-x-4">
                   {testimonial.image ? (
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
+                      className="w-10 h-10 md:w-12 md:h-12 object-cover border-2 border-black"
                     />
                   ) : (
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-primary font-semibold text-lg">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-black flex items-center justify-center">
+                      <span className="text-white font-semibold text-base md:text-lg">
                         {testimonial.name.charAt(0)}
                       </span>
                     </div>
                   )}
                   <div>
-                    <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">Пациент</p>
+                    <h4 className="font-semibold text-black uppercase text-sm md:text-base">{testimonial.name}</h4>
+                    <p className="text-xs md:text-sm text-black">Пацієнт</p>
                   </div>
                 </div>
               </CardContent>

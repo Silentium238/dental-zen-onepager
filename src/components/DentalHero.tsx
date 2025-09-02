@@ -1,54 +1,82 @@
-import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/dental-hero.jpg";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 const DentalHero = () => {
-  const scrollToBooking = () => {
-    const bookingSection = document.getElementById('booking');
-    if (bookingSection) {
-      bookingSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToNextSection = () => {
+    const nextSection = document.getElementById('about');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Red Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-background/95 to-background/80"></div>
+        <div className="absolute inset-0 bg-red-500/20"></div>
       </div>
+
+      {/* Red Blur Effects */}
+      <div className="absolute left-0 w-[30vw] md:w-[500px] h-[500px] bg-red-500 blur-4xl opacity-70 z-0"></div>
+      <div className="absolute right-0 w-[30vw] md:w-[500px] h-[500px] bg-red-500 blur-4xl opacity-70 z-0"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-          <span className="text-primary">Дентал</span> Клиник
+      <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+          <span className="text-red-500">Дентал</span> Клінік
         </h1>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Здоровая улыбка — наша забота
+        <p className="text-lg sm:text-xl md:text-2xl text-white mb-6 md:mb-8 max-w-2xl mx-auto drop-shadow-lg">
+          Сучасна стоматологія для здорової та красивої посмішки
         </p>
         
-        <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-          Современная стоматология с индивидуальным подходом к каждому пациенту. 
-          Мы используем передовые технологии для комфортного и эффективного лечения.
+        <p className="text-base sm:text-lg text-white mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-lg px-4">
+          Більше 15 років досвіду в стоматології. Використовуємо передові технології та індивідуальний підхід до кожного пацієнта.
         </p>
 
-        <Button 
-          onClick={scrollToBooking}
-          size="lg" 
-          className="text-lg px-8 py-6 rounded-full bg-primary hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
-        >
-          Записаться на приём
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
+          <Button 
+            onClick={() => {
+              const bookingSection = document.getElementById('booking');
+              if (bookingSection) {
+                bookingSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            size="lg"
+            className="w-full sm:w-auto bg-black hover:bg-red-600 text-white rounded-none uppercase px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-300"
+          >
+            Записатися на прийом
+          </Button>
+          
+          <Button 
+            onClick={() => {
+              const servicesSection = document.getElementById('services');
+              if (servicesSection) {
+                servicesSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            variant="outline"
+            size="lg"
+            className="w-full sm:w-auto border-white text-black hover:bg-red-600 hover:text-white rounded-none uppercase px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-300"
+          >
+            Наші послуги
+          </Button>
+        </div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
-        </div>
+      {/* Scroll Arrow */}
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <Button
+          onClick={scrollToNextSection}
+          variant="ghost"
+          className="text-white hover:text-red-500 transition-colors animate-bounce"
+        >
+          <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8" />
+        </Button>
       </div>
     </section>
   );
