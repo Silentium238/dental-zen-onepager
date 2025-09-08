@@ -17,17 +17,17 @@ const DentalHero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-red-500/20"></div>
+        <div className="absolute inset-0 bg-red-600/20"></div>
       </div>
 
       {/* Red Blur Effects */}
-      <div className="absolute left-0 w-[30vw] md:w-[500px] h-[500px] bg-red-500 blur-4xl opacity-70 z-0"></div>
-      <div className="absolute right-0 w-[30vw] md:w-[500px] h-[500px] bg-red-500 blur-4xl opacity-70 z-0"></div>
+      <div className="absolute left-0 w-[30vw] md:w-[500px] h-[500px] bg-red-600 blur-4xl opacity-70 z-0"></div>
+      <div className="absolute right-0 w-[30vw] md:w-[500px] h-[500px] bg-red-600 blur-4xl opacity-70 z-0"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-          <span className="text-red-500">Дентал</span> Клінік
+          <span className="text-red-600">Дентал</span> Клінік
         </h1>
         
         <p className="text-lg sm:text-xl md:text-2xl text-white mb-6 md:mb-8 max-w-2xl mx-auto drop-shadow-lg">
@@ -73,7 +73,7 @@ const DentalHero = () => {
         <Button
           onClick={scrollToNextSection}
           variant="ghost"
-          className="text-white hover:text-red-500 transition-colors animate-bounce"
+          className="text-white hover:text-red-600 transition-colors animate-bounce"
         >
           <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8" />
         </Button>

@@ -1,16 +1,16 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
-  Stethoscope, 
+  Activity, 
   Sparkles, 
-  Heart, 
-  Shield, 
-  Smile, 
-  Zap 
+  Anchor, 
+  Crown, 
+  Sun, 
+  Baby 
 } from "lucide-react";
 
 const services = [
   {
-    icon: Stethoscope,
+    icon: Activity,
     title: "Лікування зубів",
     description: "Сучасні методи лікування карієсу, пульпіту та інших захворювань зубів з використанням безболісних технологій.",
     color: "text-red-600"
@@ -22,25 +22,25 @@ const services = [
     color: "text-black"
   },
   {
-    icon: Heart,
+    icon: Anchor,
     title: "Імплантація зубів",
     description: "Встановлення якісних імплантів для відновлення втрачених зубів з гарантією на довгі роки.",
     color: "text-red-600"
   },
   {
-    icon: Smile,
+    icon: Sun,
     title: "Відбілювання зубів",
     description: "Безпечне професійне відбілювання для створення красивої білосніжної посмішки.",
     color: "text-black"
   },
   {
-    icon: Shield,
+    icon: Crown,
     title: "Протезування",
     description: "Виготовлення коронок, мостів та знімних протезів для відновлення функції жування.",
     color: "text-red-600"
   },
   {
-    icon: Zap,
+    icon: Baby,
     title: "Дитяча стоматологія",
     description: "Спеціалізований підхід до лікування дітей з комфортною та дружньою атмосферою.",
     color: "text-black"

@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ArticlesSection from "@/components/ArticlesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactsSection from "@/components/ContactsSection";
+import CallbackWidget from "@/components/CallbackWidget";
 import BookingForm from "@/components/BookingForm";
 import Footer from "@/components/Footer";
 
@@ -22,7 +23,15 @@ const Index = () => {
       <ArticlesSection />
       <TestimonialsSection />
       <ContactsSection />
-      <BookingForm />
+      
+      {/* Callback Widget Section */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="max-w-[1350px] mx-auto px-4 md:px-6">
+          <CallbackWidget />
+        </div>
+      </section>
+      
+      {/* <BookingForm /> */}
       <Footer />
     </div>
   );
