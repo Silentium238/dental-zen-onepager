@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Calendar, Clock, ArrowRight, X } from "lucide-react";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 const articles = [
@@ -84,7 +84,7 @@ const articles = [
     category: "Імплантація",
     readTime: "10 хв",
     date: "10.12.2024",
-    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=250&fit=crop&q=80",
+    image: "https://static.tildacdn.com/tild3931-3563-4837-b631-393164313333/729aa5f98b1dd3f93f90.jpg",
     fullText: `Імплантація зубів - це сучасний метод відновлення відсутніх зубів за допомогою титанових імплантатів, які імітують корінь зуба.
 
 Переваги імплантації:
@@ -139,7 +139,7 @@ const articles = [
     category: "Дитяча стоматологія",
     readTime: "6 хв",
     date: "08.12.2024",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba0ef8f?w=400&h=250&fit=crop&q=80",
+    image: "http://zdorovie29.ru/wp-content/uploads/zuby.jpg",
     fullText: `Профілактика карієсу у дітей - це комплексний підхід, який включає правильну гігієну, харчування та регулярні візити до стоматолога.
 
 Особливості дитячих зубів:
@@ -265,7 +265,7 @@ const articles = [
     category: "Харчування",
     readTime: "4 хв",
     date: "03.12.2024",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80",
+    image: "https://hi-news.ru/wp-content/uploads/2023/10/tooth_product_6-650x425.jpg",
     fullText: `Правильне харчування відіграє ключову роль у підтримці здоров'я зубів та ясен. Деякі продукти корисні для зубів, а інші можуть завдати шкоди.
 
 Корисні продукти для зубів:
@@ -404,7 +404,7 @@ const additionalArticles = [
     category: "Хірургія",
     readTime: "7 хв",
     date: "25.11.2024",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba0ef8f?w=400&h=250&fit=crop&q=80",
+    image: "https://i.pinimg.com/originals/80/a7/ff/80a7ff7813948f297a6384305edadb00.jpg",
     fullText: `Хірургічна стоматологія займається оперативними втручаннями в порожнині рота.
 
 Основні процедури:
@@ -438,7 +438,7 @@ const additionalArticles = [
     category: "Естетика",
     readTime: "8 хв",
     date: "22.11.2024",
-    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400&h=250&fit=crop&q=80",
+    image: "https://i.pinimg.com/736x/b2/49/32/b249320ea6845ba6b9f15949c57f0725.jpg",
     fullText: `Естетична стоматологія займається покращенням зовнішнього вигляду зубів та посмішки.
 
 Основні процедури:
@@ -477,7 +477,7 @@ const additionalArticles = [
     category: "Дитяча стоматологія",
     readTime: "5 хв",
     date: "20.11.2024",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80",
+    image: "https://avatars.mds.yandex.net/i?id=16f0aa6a940826ed387ac7486325fcf85304c348-7450098-images-thumbs&n=13",
     fullText: `Дитяча стоматологія має свої особливості через анатомічні та психологічні особливості дітей.
 
 Особливості дитячих зубів:
@@ -522,7 +522,7 @@ const additionalArticles = [
     category: "Пародонтологія",
     readTime: "6 хв",
     date: "18.11.2024",
-    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=250&fit=crop&q=80",
+    image: "https://stomatologist.org/wp-content/uploads/2019/01/ec9c1ccf284f0421018b94bb3f2303f4.jpg",
     fullText: `Захворювання ясен - одна з найпоширеніших проблем у стоматології, яку можна запобігти.
 
 Основні захворювання ясен:
@@ -588,7 +588,7 @@ const ArticlesSection = () => {
           {displayedArticles.map((article) => (
             <Card 
               key={article.id} 
-              className="border border-black shadow-none hover:border-red-600 transition-all duration-300 bg-white rounded-none group"
+              className="border border-black shadow-none hover:border-red-600 transition-all duration-300 bg-white rounded-none group flex flex-col h-full"
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -607,25 +607,27 @@ const ArticlesSection = () => {
                 </CardTitle>
               </CardHeader>
               
-              <CardContent className="p-4 sm:p-6 pt-0">
-                <p className="text-black leading-tight tracking-normal font-normal mb-3 sm:mb-4 text-sm sm:text-base">
-                  {article.excerpt}
-                </p>
-                
-                <div className="flex items-center justify-between text-xs sm:text-sm text-black mb-3 sm:mb-4">
-                  <div className="flex items-center gap-1 sm:gap-2">
-                    <Calendar className="w-3 h-3 sm:w-4 sm:h-4 text-red-600" />
-                    <span>{article.date}</span>
-                  </div>
-                  <div className="flex items-center gap-1 sm:gap-2">
-                    <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-red-600" />
-                    <span>{article.readTime}</span>
+              <CardContent className="p-4 sm:p-6 pt-0 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <p className="text-black leading-tight tracking-normal font-normal mb-3 sm:mb-4 text-sm sm:text-base">
+                    {article.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between text-xs sm:text-sm text-black mb-3 sm:mb-4">
+                    <div className="flex items-center gap-1 sm:gap-2">
+                      <Calendar className="w-3 h-3 sm:w-4 sm:h-4 text-red-600" />
+                      <span>{article.date}</span>
+                    </div>
+                    <div className="flex items-center gap-1 sm:gap-2">
+                      <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-red-600" />
+                      <span>{article.readTime}</span>
+                    </div>
                   </div>
                 </div>
                 
                 <Button
                   onClick={() => setSelectedArticle(article)}
-                  className="w-full bg-black hover:bg-red-600 text-white rounded-none uppercase h-[36px] sm:h-[40px] text-sm sm:text-[16px] font-normal group-hover:border-red-600 transition-all duration-300"
+                  className="w-full bg-black hover:bg-red-600 text-white rounded-none uppercase h-[36px] sm:h-[40px] text-sm sm:text-[16px] font-normal group-hover:border-red-600 transition-all duration-300 mt-auto"
                 >
                   <span>Читати статтю</span>
                   <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -649,19 +651,9 @@ const ArticlesSection = () => {
       <Dialog open={!!selectedArticle} onOpenChange={() => setSelectedArticle(null)}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <div className="flex items-center justify-between">
-              <DialogTitle className="text-2xl font-bold text-black uppercase">
-                {selectedArticle?.title}
-              </DialogTitle>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setSelectedArticle(null)}
-                className="text-gray-500 hover:text-gray-700"
-              >
-                <X className="w-5 h-5" />
-              </Button>
-            </div>
+            <DialogTitle className="text-2xl font-bold text-black uppercase">
+              {selectedArticle?.title}
+            </DialogTitle>
             <div className="flex items-center gap-4 text-sm text-gray-600 mt-2">
               <div className="flex items-center gap-1">
                 <Calendar className="w-4 h-4 text-red-600" />

@@ -41,9 +41,9 @@ const DentalHero = () => {
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
           <Button 
             onClick={() => {
-              const bookingSection = document.getElementById('booking');
-              if (bookingSection) {
-                bookingSection.scrollIntoView({ behavior: 'smooth' });
+              const callbackSection = document.getElementById('callback');
+              if (callbackSection) {
+                callbackSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
             size="lg"

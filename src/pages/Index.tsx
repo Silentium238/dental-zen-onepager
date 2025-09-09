@@ -25,7 +25,7 @@ const Index = () => {
       <ContactsSection />
       
       {/* Callback Widget Section */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section id="callback" className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-[1350px] mx-auto px-4 md:px-6">
           <CallbackWidget />
         </div>

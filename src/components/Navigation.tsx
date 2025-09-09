@@ -90,7 +90,7 @@ const Navigation = () => {
             ))}
             
             <button
-              onClick={() => scrollToSection("booking")}
+              onClick={() => scrollToSection("callback")}
               className="bg-black hover:bg-red-600 text-white w-[180px] lg:w-[200px] xl:w-[210px] h-[38px] tracking-wide rounded-none uppercase text-[14px] lg:text-[16px] xl:text-[18px] font-normal transition-all duration-300 whitespace-nowrap"
             >
               Записатися_
@@ -129,7 +129,7 @@ const Navigation = () => {
               ))}
               <li className="font-medium">
                 <button
-                  onClick={() => scrollToSection("booking")}
+                  onClick={() => scrollToSection("callback")}
                   className="w-full h-[50px] bg-black text-white hover:bg-red-600 transition-colors"
                 >
                   Записатися_
