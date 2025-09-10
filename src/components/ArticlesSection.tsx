@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import sims1 from "@/assets/sims1.png";
+import sims2 from "@/assets/sims2.png";
+import sims3 from "@/assets/sims3.png";
+import sims4 from "@/assets/sims4.png";
+import sims5 from "@/assets/sims5.png";
+import sims6 from "@/assets/sims6.png";
+
 
 const articles = [
   {
@@ -12,7 +19,7 @@ const articles = [
     category: "Гігієна",
     readTime: "5 хв",
     date: "15.12.2024",
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&h=250&fit=crop&q=80",
+    image: sims1,
     fullText: `Правильний догляд за зубами - це основа здоров'я порожнини рота. Щоденна гігієна допомагає запобігти карієсу, хворобам ясен та іншим стоматологічним проблемам.
 
 Основні правила догляду за зубами:
@@ -44,7 +51,7 @@ const articles = [
     category: "Косметологія",
     readTime: "7 хв",
     date: "12.12.2024",
-    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400&h=250&fit=crop&q=80",
+    image: sims2,
     fullText: `Відбілювання зубів - це популярна косметична процедура, яка допомагає покращити колір зубної емалі та зробити посмішку більш привабливою.
 
 Види відбілювання:
@@ -84,7 +91,7 @@ const articles = [
     category: "Імплантація",
     readTime: "10 хв",
     date: "10.12.2024",
-    image: "https://static.tildacdn.com/tild3931-3563-4837-b631-393164313333/729aa5f98b1dd3f93f90.jpg",
+    image: sims3,
     fullText: `Імплантація зубів - це сучасний метод відновлення відсутніх зубів за допомогою титанових імплантатів, які імітують корінь зуба.
 
 Переваги імплантації:
@@ -139,7 +146,7 @@ const articles = [
     category: "Дитяча стоматологія",
     readTime: "6 хв",
     date: "08.12.2024",
-    image: "http://zdorovie29.ru/wp-content/uploads/zuby.jpg",
+    image: sims4,
     fullText: `Профілактика карієсу у дітей - це комплексний підхід, який включає правильну гігієну, харчування та регулярні візити до стоматолога.
 
 Особливості дитячих зубів:
@@ -191,7 +198,7 @@ const articles = [
     category: "Ортодонтія",
     readTime: "8 хв",
     date: "05.12.2024",
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&h=250&fit=crop&q=80",
+    image: sims5,
     fullText: `Брекети - це ортодонтичні конструкції для виправлення прикусу та вирівнювання зубів. Сучасна ортодонтія пропонує різні типи брекет-систем.
 
 Види брекет-систем:
@@ -265,7 +272,7 @@ const articles = [
     category: "Харчування",
     readTime: "4 хв",
     date: "03.12.2024",
-    image: "https://hi-news.ru/wp-content/uploads/2023/10/tooth_product_6-650x425.jpg",
+    image: sims6,
     fullText: `Правильне харчування відіграє ключову роль у підтримці здоров'я зубів та ясен. Деякі продукти корисні для зубів, а інші можуть завдати шкоди.
 
 Корисні продукти для зубів:

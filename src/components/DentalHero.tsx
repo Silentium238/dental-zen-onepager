@@ -1,6 +1,7 @@
 import heroImage from "@/assets/dental-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import simsRoom from "@/assets/simsRoom.png";
 
 const DentalHero = () => {
   const scrollToNextSection = () => {
@@ -15,7 +16,7 @@ const DentalHero = () => {
       {/* Background Image with Red Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url(${simsRoom})` }}
       >
         <div className="absolute inset-0 bg-red-600/20"></div>
       </div>

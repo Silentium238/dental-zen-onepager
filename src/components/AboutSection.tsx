@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import teamImage from "@/assets/dental-team.jpg";
+import simsTeam from "@/assets/simsTeam.png";
 
 const AboutSection = () => {
   return (
@@ -48,7 +49,7 @@ const AboutSection = () => {
 
           <div className="relative">
             <img 
-              src={teamImage} 
+              src={simsTeam} 
               alt="Команда стоматологічної клініки"
               className="w-full h-auto object-cover border border-black"
             />
