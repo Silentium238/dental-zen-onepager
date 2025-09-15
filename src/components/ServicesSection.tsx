@@ -7,40 +7,46 @@ import {
   Sun, 
   Baby 
 } from "lucide-react";
+import service1 from "@/assets/service1.png";
+import service2 from "@/assets/service2.png";
+import service3 from "@/assets/service3.png";
+import service4 from "@/assets/service4.png";
+import service5 from "@/assets/service5.png";
+import service6 from "@/assets/service6.png";
 
 const services = [
   {
-    icon: Activity,
+    icon: service1,
     title: "Лікування зубів",
     description: "Сучасні методи лікування карієсу, пульпіту та інших захворювань зубів з використанням безболісних технологій.",
     color: "text-red-600"
   },
   {
-    icon: Sparkles,
+    icon: service2,
     title: "Професійна чистка",
     description: "Видалення зубного каменю та нальоту, полірування зубів для підтримки здоров'я порожнини рота.",
     color: "text-black"
   },
   {
-    icon: Anchor,
+    icon: service3,
     title: "Імплантація зубів",
     description: "Встановлення якісних імплантів для відновлення втрачених зубів з гарантією на довгі роки.",
     color: "text-red-600"
   },
   {
-    icon: Sun,
+    icon: service4,
     title: "Відбілювання зубів",
     description: "Безпечне професійне відбілювання для створення красивої білосніжної посмішки.",
     color: "text-black"
   },
   {
-    icon: Crown,
+    icon: service5,
     title: "Протезування",
     description: "Виготовлення коронок, мостів та знімних протезів для відновлення функції жування.",
     color: "text-red-600"
   },
   {
-    icon: Baby,
+    icon: service6,
     title: "Дитяча стоматологія",
     description: "Спеціалізований підхід до лікування дітей з комфортною та дружньою атмосферою.",
     color: "text-black"
@@ -60,15 +66,14 @@ const ServicesSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => {
-            const IconComponent = service.icon;
             return (
               <Card 
                 key={index} 
                 className="border border-black shadow-none hover:border-red-600 transition-all duration-300 bg-white rounded-none"
               >
                 <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-3 md:p-4 bg-black rounded-none w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
-                    <IconComponent className={`w-6 h-6 md:w-8 md:h-8 text-white`} />
+                  <div className="mx-auto mb-4 p-3 md:p-4 bg-white rounded-none w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
+                    <img src={service.icon} alt={service.title} className="w-10 h-10 md:w-12 md:h-12 text-white" />
                   </div>
                   <CardTitle className="text-lg md:text-xl font-semibold text-black uppercase">
                     {service.title}
