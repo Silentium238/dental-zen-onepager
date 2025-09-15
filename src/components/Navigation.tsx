@@ -86,7 +86,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-[14px] lg:text-[16px] xl:text-[18px] h-[38px] text-black hover:text-red-600 transition-colors duration-200 font-normal uppercase group whitespace-nowrap"
+                className="text-[14px] lg:text-[22px] xl:text-[18px] h-[38px] text-black hover:text-red-600 transition-colors duration-200 font-normal uppercase group whitespace-nowrap"
               >
                 {item.label}
                 <span className="group-hover:animate-blink text-2xl lg:text-3xl font-bold relative bottom-[2px] lg:bottom-[3px] opacity-0 group-hover:opacity-100">
