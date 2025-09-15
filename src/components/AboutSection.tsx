@@ -1,9 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import teamImage from "@/assets/dental-team.jpg";
+import { useImageContext } from "@/contexts/ImageContext";
+import teamImage from "@/assets/dental-team.jpg"; 
 import simsTeam from "@/assets/simsTeam.png";
 
 const AboutSection = () => {
+  const { currentImageSet } = useImageContext();
+  
+  // Выбираем изображение команды в зависимости от текущего набора
+  const teamImageSrc = currentImageSet === 'simsRoom' ? simsTeam : teamImage;
+
   return (
     <section id="about" className="py-12 md:py-20 bg-white">
       <div className="max-w-[1350px] mx-auto px-4 md:px-6">
@@ -49,9 +55,9 @@ const AboutSection = () => {
 
           <div className="relative">
             <img 
-              src={simsTeam} 
+              src={teamImageSrc} 
               alt="Команда стоматологічної клініки"
-              className="w-full h-auto object-cover border border-black"
+              className="w-full h-auto object-cover border border-black transition-all duration-500"
             />
             <div className="absolute -bottom-4 -left-4 bg-black text-white p-4 md:p-6 border border-black">
               <div className="text-2xl md:text-3xl font-bold">5000+</div>

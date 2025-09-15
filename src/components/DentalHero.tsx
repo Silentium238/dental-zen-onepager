@@ -1,9 +1,13 @@
 import heroImage from "@/assets/dental-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { useImageContext } from "@/contexts/ImageContext";
 import simsRoom from "@/assets/simsRoom.png";
+import dentalRoom from "@/assets/dental-hero.jpg";
 
 const DentalHero = () => {
+  const { currentImageSet } = useImageContext();
+  
   const scrollToNextSection = () => {
     const nextSection = document.getElementById('about');
     if (nextSection) {
@@ -11,12 +15,15 @@ const DentalHero = () => {
     }
   };
 
+  // Выбираем изображение в зависимости от текущего набора
+  const backgroundImage = currentImageSet === 'simsRoom' ? simsRoom : dentalRoom;
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Red Overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${simsRoom})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-500"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="absolute inset-0 bg-red-600/20"></div>
       </div>

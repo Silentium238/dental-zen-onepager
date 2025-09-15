@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
+import { useImageContext } from "@/contexts/ImageContext";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
+  const { toggleImageSet, currentImageSet } = useImageContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,8 +70,12 @@ const Navigation = () => {
         <div className={`flex justify-around md:justify-between w-full max-w-[1350px] h-[60px] mx-auto items-center px-4 md:px-6 ${isMobileMenuOpen ? 'border-b border-black' : ''}`}>
           {/* Logo */}
           <button
-            onClick={() => scrollToSection("hero")}
+            onClick={() => {
+              scrollToSection("hero");
+              toggleImageSet();
+            }}
             className="text-2xl md:text-3xl font-bold text-black hover:text-red-600 transition-colors"
+            title={`Переключити на ${currentImageSet === 'simsRoom' ? 'dentalRoom' : 'simsRoom'} изображения`}
           >
             ДЕНТАЛ_
           </button>
