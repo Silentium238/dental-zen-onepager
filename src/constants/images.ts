@@ -19,4 +19,4 @@ import article7 from "@/assets/article5.jpg";
 import article8 from "@/assets/article6.jpg";
 
 export const simsRoomImages = [sims1, sims2, sims3, sims4, sims5, sims6, sims7, sims8];
-export const dentalRoomImages = [article1, article2, article3, article4, article5, article6, article7, article8];
+export const dentalRoomImages = [article4, article2, article3, article1, article5, article6, article7, article8];

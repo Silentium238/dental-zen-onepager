@@ -53,12 +53,12 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { label: "Головна_", id: "hero" },
-    { label: "Про нас_", id: "about" },
-    { label: "Послуги_", id: "services" },
-    { label: "Статті_", id: "articles" },
-    { label: "Відгуки_", id: "testimonials" },
-    { label: "Контакти_", id: "contacts" },
+    { label: "Головна", id: "hero" },
+    { label: "Про нас", id: "about" },
+    { label: "Послуги", id: "services" },
+    { label: "Статті", id: "articles" },
+    { label: "Відгуки", id: "testimonials" },
+    { label: "Контакти", id: "contacts" },
   ];
 
   return (
