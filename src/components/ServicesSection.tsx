@@ -71,7 +71,7 @@ const ServicesSection = () => {
             return (
               <Card 
                 key={index} 
-                className="border border-black shadow-none hover:border-red-600 transition-all duration-300 bg-white rounded-none"
+                className="border border-black shadow-none transition-all duration-300 bg-white rounded-none"
               >
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-4 p-3 md:p-4 bg-white rounded-none w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
