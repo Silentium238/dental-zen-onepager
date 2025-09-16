@@ -38,7 +38,7 @@ const Footer = () => {
             <div className="space-y-2 text-white/80 text-sm md:text-base">
               <p>Івано-Франківськ, вулиця Незалежності, 17</p>
               <p className="hover:text-red-600 transition-colors">
-                <a href="tel:+380670001212">+38 (067) 000 12 12</a>
+                <a href="tel:+380670001212">+38 (067) 000-12-12</a>
               </p>
               <p className="hover:text-red-600 transition-colors">
                 <a href="mailto:info@dentalclinic.ua">info@dentalclinic.ua</a>
