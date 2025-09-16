@@ -8,6 +8,7 @@ import ContactsSection from "@/components/ContactsSection";
 import CallbackWidget from "@/components/CallbackWidget";
 import BookingForm from "@/components/BookingForm";
 import Footer from "@/components/Footer";
+import FloatingPhoneButton from "@/components/FloatingPhoneButton";
 
 const Index = () => {
   return (
@@ -24,15 +25,18 @@ const Index = () => {
       <TestimonialsSection />
       <ContactsSection />
       
-      {/* Callback Widget Section */}
+      {/* Callback Widget Section
       <section id="callback" className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-[1350px] mx-auto px-4 md:px-6">
           <CallbackWidget />
         </div>
-      </section>
+      </section> */}
       
       {/* <BookingForm /> */}
       <Footer />
+      
+      {/* Плавающая кнопка телефона */}
+      <FloatingPhoneButton />
     </div>
   );
 };
