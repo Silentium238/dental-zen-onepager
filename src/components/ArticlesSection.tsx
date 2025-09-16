@@ -592,7 +592,7 @@ const ArticlesSection = () => {
           {displayedArticles.map((article) => (
             <Card 
               key={article.id} 
-              className="border border-black shadow-none hover:border-red-600 transition-all duration-300 bg-white rounded-none group flex flex-col h-full"
+              className="border border-black shadow-none hover:border-black transition-all duration-300 bg-white rounded-none group flex flex-col h-full"
             >
               <div className="relative overflow-hidden">
                 <img 
