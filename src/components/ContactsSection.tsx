@@ -24,8 +24,8 @@ const ContactsSection = () => {
               </CardHeader>
               <CardContent className="pt-0">
                 <p className="text-black leading-tight tracking-normal font-normal text-sm md:text-base">
-                  м. Київ, вул. Хрещатик, 1<br />
-                  ТЦ "Медичний", 2 поверх
+                Івано-Франківськ, вулиця Незалежності, 17
+              
                 </p>
               </CardContent>
             </Card>
@@ -88,22 +88,19 @@ const ContactsSection = () => {
                 <CardTitle className="text-lg md:text-xl text-black uppercase">Як до нас дістатися</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="bg-white border border-black h-64 md:h-80 flex items-center justify-center">
+                <div className="bg-white border border-black h-80 md:h-96 lg:h-[500px] flex items-center justify-center">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.0!2d30.5234!3d50.4501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0e033ecbe9%3A0x57a4dffefec77da0!2sKhreshchatyk%2C%20Kyiv%2C%20Ukraine!5e0!3m2!1sen!2sua!4v1635780000000!5m2!1sen!2sua"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.5!2d24.711117!3d48.922633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c5c5c5c5c5c5%3A0x5c5c5c5c5c5c5c5c!2z0JjQstCw0L3Qvi3QpNCw0L3Qs9C-0LfQuNC90Y_QvdC40LksINCy0LLQuNC90L7Qv9C-0L_RgtC10YXQvdC40YfQtdGB0LrQuNC5LCDQstC40L3RgtC-0LLRgdC60L7QtSDQvdC10LTQtdCy0L7QsdGA0LDQttC10L3QuNC1LCAxNw!5e0!3m2!1suk!2sua!4v1635780000000!5m2!1suk!2sua"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Розташування клініки"
+                    title="Розташування клініки в Івано-Франківську"
                   />
                 </div>
-                <div className="mt-3 md:mt-4 text-xs md:text-sm text-black">
-                  <p className="mb-1 md:mb-2">🚇 Найближча станція метро: "Хрещатик" (5 хв пішки)</p>
-                  <p>🚗 Парковка: Безкоштовна для пацієнтів</p>
-                </div>
+              
               </CardContent>
             </Card>
           </div>

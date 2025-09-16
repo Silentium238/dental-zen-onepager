@@ -30,9 +30,9 @@ const AboutSection = () => {
                   вивчаючи найновіші методи лікування та технології.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-red-600 text-white rounded-none border-bg-red-600 hover:bg-red-600 transition-all duration-300">15+ років досвіду</Badge>
-                  <Badge variant="secondary" className="bg-red-600 text-white rounded-none border-bg-red-600 hover:bg-red-600 transition-all duration-300">Сертифіковані спеціалісти</Badge>
-                  <Badge variant="secondary" className="bg-red-600 text-white rounded-none border-bg-red-600 hover:bg-red-600 transition-all duration-300">Постійне навчання</Badge>
+                  <Badge variant="secondary" className="bg-black text-white rounded-none border-bg-black hover:bg-black transition-all duration-300">15+ років досвіду</Badge>
+                  <Badge variant="secondary" className="bg-black text-white rounded-none border-bg-black hover:bg-black transition-all duration-300">Сертифіковані спеціалісти</Badge>
+                  <Badge variant="secondary" className="bg-black text-white rounded-none border-bg-black hover:bg-black transition-all duration-300">Постійне навчання</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -45,9 +45,9 @@ const AboutSection = () => {
                   лазерне лікування, 3D-сканування для точної діагностики та комфортного лікування.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-red-600 text-white rounded-none border-bg-red-600 hover:bg-red-600 transition-all duration-300">Цифрова діагностика</Badge>
-                  <Badge variant="secondary" className="bg-red-600 text-white rounded-none border-bg-red-600 hover:bg-red-600 transition-all duration-300">Лазерні технології</Badge>
-                  <Badge variant="secondary" className="bg-red-600 text-white rounded-none border-bg-red-600 hover:bg-red-600 transition-all duration-300">3D-сканування</Badge>
+                  <Badge variant="secondary" className="bg-black text-white rounded-none border-bg-black hover:bg-black transition-all duration-300">Цифрова діагностика</Badge>
+                  <Badge variant="secondary" className="bg-black text-white rounded-none border-bg-black hover:bg-black transition-all duration-300">Лазерні технології</Badge>
+                  <Badge variant="secondary" className="bg-black text-white rounded-none border-bg-bg-black hover:bg-black transition-all duration-300">3D-сканування</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -59,7 +59,7 @@ const AboutSection = () => {
               alt="Команда стоматологічної клініки"
               className="w-full h-auto object-cover border border-black transition-all duration-500"
             />
-            <div className="absolute -bottom-4 -left-4 bg-red-600 text-white p-4 md:p-6 border border-black">
+            <div className="absolute -bottom-4 -left-4 bg-black text-white p-4 md:p-6 border border-black">
               <div className="text-2xl md:text-3xl font-bold">5000+</div>
               <div className="text-xs md:text-sm uppercase">Задоволених пацієнтів</div>
             </div>

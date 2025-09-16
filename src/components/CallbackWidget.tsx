@@ -76,7 +76,7 @@ const CallbackWidget = () => {
                 placeholder="Ваш номер телефону"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
-                className="h-12 border-black focus:ring-red-600 rounded-none bg-white text-black placeholder:text-gray-500"
+                className="h-12 border-black focus-visible:ring-0 focus-visible:ring-offset-0 focus:border-red-600 focus:outline-none rounded-none bg-white text-black placeholder:text-gray-500"
               />
             </div>
             <Button

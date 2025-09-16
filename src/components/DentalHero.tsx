@@ -68,7 +68,7 @@ const DentalHero = () => {
             }}
             variant="outline"
             size="lg"
-            className="w-full sm:w-auto border-white text-black hover:bg-red-600 hover:text-white rounded-none uppercase px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-300"
+            className="w-full sm:w-auto border-white text-black hover:bg-red-600 hover:border-red-600 hover:text-white rounded-none uppercase px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-300"
           >
             Наші послуги
           </Button>

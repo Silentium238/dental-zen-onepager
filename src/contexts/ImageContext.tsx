@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { simsRoomImages, dentalRoomImages } from '@/constants/images';
 
-type ImageSet = 'dentalRoom' | 'simsRoom';
+type ImageSet = 'dentalRoom' | 'dentalRoom';
 
 interface ImageContextType {
   currentImageSet: ImageSet;
@@ -15,7 +15,7 @@ export const ImageProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const [currentImageSet, setCurrentImageSet] = useState<ImageSet>('dentalRoom');
 
   const toggleImageSet = () => {
-    setCurrentImageSet(prev => prev === 'dentalRoom' ? 'simsRoom' : 'dentalRoom');
+    setCurrentImageSet(prev => prev === 'dentalRoom' ? 'dentalRoom' : 'dentalRoom');
   };
 
   const getCurrentImages = () => {

@@ -63,6 +63,8 @@ const Navigation = () => {
     { label: "Контакти_", id: "contacts" },
   ];
 
+
+  // simsRoom
   return (
     <div
       className="z-50 bg-white w-full opacity-100 relative"
@@ -77,7 +79,7 @@ const Navigation = () => {
               toggleImageSet();
             }}
             className="text-2xl md:text-3xl font-bold text-black hover:text-red-600 transition-colors"
-            title={`Переключити на ${currentImageSet === 'simsRoom' ? 'dentalRoom' : 'simsRoom'} изображения`}
+            title={`Переключити на ${currentImageSet === 'dentalRoom' ? 'dentalRoom' : 'dentalRoom'} изображения`}
           >
             ДЕНТАЛ_
           </button>
@@ -97,12 +99,12 @@ const Navigation = () => {
               </button>
             ))}
             
-            <button
+            {/* <button
               onClick={openCallback}
               className="bg-black hover:bg-red-600 text-white w-[180px] lg:w-[200px] xl:w-[210px] h-[38px] tracking-wide rounded-none uppercase text-[14px] lg:text-[16px] xl:text-[18px] font-normal transition-all duration-300 whitespace-nowrap"
             >
               Записатися_
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -135,14 +137,14 @@ const Navigation = () => {
                   </button>
                 </li>
               ))}
-              <li className="font-medium">
+              {/* <li className="font-medium">
                 <button
                   onClick={openCallback}
                   className="w-full h-[50px] bg-black text-white hover:bg-red-600 transition-colors"
                 >
                   Записатися_
                 </button>
-              </li>
+              </li> */}
             </ul>
           </div>
         )}

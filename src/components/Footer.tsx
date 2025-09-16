@@ -36,8 +36,7 @@ const Footer = () => {
           <div>
             <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 uppercase">Контакти</h4>
             <div className="space-y-2 text-white/80 text-sm md:text-base">
-              <p>м. Київ, вул. Хрещатик, 1</p>
-              <p>ТЦ "Медичний", 2 поверх</p>
+              <p>Івано-Франківськ, вулиця Незалежності, 17</p>
               <p className="hover:text-red-600 transition-colors">
                 <a href="tel:+380441234567">+38 (044) 123-45-67</a>
               </p>
