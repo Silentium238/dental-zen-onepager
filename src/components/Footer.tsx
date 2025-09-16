@@ -49,7 +49,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/20 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-white/60">
-          <p className="text-xs md:text-sm">&copy; 2024 Дентал Клінік. Всі права захищені.</p>
+          <p className="text-xs md:text-sm">&copy; 2025 Дентал Клінік. Всі права захищені.</p>
         </div>
       </div>
     </footer>

@@ -13,7 +13,7 @@ import service3 from "@/assets/service3.png";
 import service4 from "@/assets/service4.png";
 import service5 from "@/assets/service5.png";
 import service6 from "@/assets/service6.png";
-import service7 from "@/assets/service7.png";
+import service7 from "@/assets/service7-7-7-7.png";
 import service8 from "@/assets/service8.png";
 
 const services = [
