@@ -54,8 +54,10 @@ const DentalHero = () => {
                 callbackSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
+            style={{backgroundColor: 'white'}}
+            variant="outline"
             size="lg"
-            className="w-full sm:w-auto bg-black hover:bg-red-600 text-white rounded-none uppercase px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-300"
+            className="w-full sm:w-auto bg-white hover:border-red-600 hover:text-red-600 text-black rounded-none uppercase px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-300"
           >
             Записатися на прийом
           </Button>

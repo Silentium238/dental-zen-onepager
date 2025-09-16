@@ -17,7 +17,7 @@ const ContactsSection = () => {
           <div className="space-y-4 md:space-y-6">
             <Card className="border border-black shadow-none bg-white rounded-none">
               <CardHeader className="flex flex-row items-center space-y-0 space-x-3 md:space-x-4 pb-3 md:pb-4">
-                <div className="p-2 md:p-3 bg-black">
+                <div className="p-2 md:p-3 bg-red-600">
                   <MapPin className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
                 <CardTitle className="text-lg md:text-xl text-black uppercase">Адреса</CardTitle>
@@ -32,7 +32,7 @@ const ContactsSection = () => {
 
             <Card className="border border-black shadow-none bg-white rounded-none">
               <CardHeader className="flex flex-row items-center space-y-0 space-x-3 md:space-x-4 pb-3 md:pb-4">
-                <div className="p-2 md:p-3 bg-black">
+                <div className="p-2 md:p-3 bg-red-600">
                   <Phone className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
                 <CardTitle className="text-lg md:text-xl text-black uppercase">Телефон</CardTitle>
@@ -51,7 +51,7 @@ const ContactsSection = () => {
 
             <Card className="border border-black shadow-none bg-white rounded-none">
               <CardHeader className="flex flex-row items-center space-y-0 space-x-3 md:space-x-4 pb-3 md:pb-4">
-                <div className="p-2 md:p-3 bg-black">
+                <div className="p-2 md:p-3 bg-red-600">
                   <Mail className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
                 <CardTitle className="text-lg md:text-xl text-black uppercase">Email</CardTitle>
@@ -67,7 +67,7 @@ const ContactsSection = () => {
 
             <Card className="border border-black shadow-none bg-white rounded-none">
               <CardHeader className="flex flex-row items-center space-y-0 space-x-3 md:space-x-4 pb-3 md:pb-4">
-                <div className="p-2 md:p-3 bg-black">
+                <div className="p-2 md:p-3 bg-red-600">
                   <Clock className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
                 <CardTitle className="text-lg md:text-xl text-black uppercase">Години роботи</CardTitle>

@@ -600,7 +600,7 @@ const ArticlesSection = () => {
                   alt={article.title}
                   className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-black text-white px-2 py-1 sm:px-3 sm:py-1 text-xs sm:text-sm uppercase">
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-red-600 text-white px-2 py-1 sm:px-3 sm:py-1 text-xs sm:text-sm uppercase">
                   {article.category}
                 </div>
               </div>
@@ -631,10 +631,13 @@ const ArticlesSection = () => {
                 
                 <Button
                   onClick={() => setSelectedArticle(article)}
-                  className="w-full bg-black hover:bg-red-600 text-white rounded-none uppercase h-[36px] sm:h-[40px] text-sm sm:text-[16px] font-normal group-hover:border-red-600 transition-all duration-300 mt-auto"
+                   style={{backgroundColor: 'white'}}
+            variant="outline"
+                  className="w-full bg-white text-black border-black hover:text-red-600 rounded-none uppercase h-[36px] sm:h-[40px] text-sm sm:text-[16px] font-normal hover:border-red-600 transition-all duration-300 mt-auto flex justify-between items-center px-4"
                 >
                   <span>Читати статтю</span>
-                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              
+                  <ArrowRight style={{width: '25px', height: '25px'}} className="w-8 h-8 sm:w-10 sm:h-10 group-hover:translate-x-1 transition-transform duration-300 rotate-45" />
                 </Button>
               </CardContent>
             </Card>
@@ -643,8 +646,10 @@ const ArticlesSection = () => {
 
         <div className="text-center mt-8 sm:mt-12">
           <Button
+            // style={{backgroundColor: 'white'}}
+            variant="outline"
             onClick={() => setShowAllArticles(!showAllArticles)}
-            className="bg-black hover:bg-red-600 text-white rounded-none uppercase h-[44px] sm:h-[50px] text-base sm:text-[18px] font-normal px-6 sm:px-8"
+            className="bg-white hover:bg-red-600 text-black border-black hover:text-white rounded-none uppercase h-[44px] sm:h-[50px] text-base sm:text-[18px] font-normal px-6 sm:px-8"
           >
             {showAllArticles ? 'Показати менше' : 'Всі статті'}
           </Button>
@@ -667,7 +672,7 @@ const ArticlesSection = () => {
                 <Clock className="w-4 h-4 text-red-600" />
                 <span>{selectedArticle?.readTime}</span>
               </div>
-              <div className="bg-black text-white px-2 py-1 text-xs uppercase">
+              <div className="bg-red-600 text-white px-2 py-1 text-xs uppercase">
                 {selectedArticle?.category}
               </div>
             </div>

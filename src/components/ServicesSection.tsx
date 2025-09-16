@@ -13,6 +13,8 @@ import service3 from "@/assets/service3.png";
 import service4 from "@/assets/service4.png";
 import service5 from "@/assets/service5.png";
 import service6 from "@/assets/service6.png";
+import service7 from "@/assets/service7.png";
+import service8 from "@/assets/service8.png";
 
 const services = [
   {
@@ -28,9 +30,9 @@ const services = [
     color: "text-black"
   },
   {
-    icon: service3,
-    title: "Імплантація зубів",
-    description: "Встановлення якісних імплантів для відновлення втрачених зубів з гарантією на довгі роки.",
+    icon: service7,
+    title: "Лечение парадонтиту",
+    description: "Комплексне лікування захворювань пародонту сучасними методами для збереження здоров'я ясен.",
     color: "text-red-600"
   },
   {
@@ -46,9 +48,9 @@ const services = [
     color: "text-red-600"
   },
   {
-    icon: service6,
-    title: "Дитяча стоматологія",
-    description: "Спеціалізований підхід до лікування дітей з комфортною та дружньою атмосферою.",
+    icon: service8,
+    title: "Лечение гингивиту",
+    description: "Ефективне лікування гінгівіту та запалення ясен з використанням сучасних методів терапії.",
     color: "text-black"
   }
 ];

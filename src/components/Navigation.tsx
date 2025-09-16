@@ -53,12 +53,12 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { label: "Головна", id: "hero" },
-    { label: "Про нас", id: "about" },
-    { label: "Послуги", id: "services" },
-    { label: "Статті", id: "articles" },
-    { label: "Відгуки", id: "testimonials" },
-    { label: "Контакти", id: "contacts" },
+    { label: "Головна_", id: "hero" },
+    { label: "Про нас_", id: "about" },
+    { label: "Послуги_", id: "services" },
+    { label: "Статті_", id: "articles" },
+    { label: "Відгуки_", id: "testimonials" },
+    { label: "Контакти_", id: "contacts" },
   ];
 
   return (
@@ -89,9 +89,9 @@ const Navigation = () => {
                 className="text-[14px] lg:text-[22px] xl:text-[18px] h-[38px] text-black hover:text-red-600 transition-colors duration-200 font-normal uppercase group whitespace-nowrap"
               >
                 {item.label}
-                <span className="group-hover:animate-blink text-2xl lg:text-3xl font-bold relative bottom-[2px] lg:bottom-[3px] opacity-0 group-hover:opacity-100">
+                {/* <span className="group-hover:animate-blink text-2xl lg:text-3xl font-bold relative bottom-[2px] lg:bottom-[3px] opacity-0 group-hover:opacity-100">
                   _
-                </span>
+                </span> */}
               </button>
             ))}
             
