@@ -658,20 +658,12 @@ const ArticlesSection = () => {
 
       {/* Модальне вікно для відображення повного тексту статті */}
       <Dialog open={!!selectedArticle} onOpenChange={() => setSelectedArticle(null)}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogContent  style={{borderRadius: '0'}} className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-black uppercase">
               {selectedArticle?.title}
             </DialogTitle>
             <div className="flex items-center gap-4 text-sm text-gray-600 mt-2">
-              <div className="flex items-center gap-1">
-                <Calendar className="w-4 h-4 text-red-600" />
-                <span>{selectedArticle?.date}</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Clock className="w-4 h-4 text-red-600" />
-                <span>{selectedArticle?.readTime}</span>
-              </div>
               <div className="bg-red-600 text-white px-2 py-1 text-xs uppercase">
                 {selectedArticle?.category}
               </div>
