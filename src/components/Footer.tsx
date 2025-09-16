@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="sm:col-span-2">
             <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">ДЕНТАЛ_</h3>
             <p className="text-white/80 mb-3 md:mb-4 leading-tight tracking-normal font-normal text-sm md:text-base">
-              Ваша надійна стоматологічна клініка в Івано-франківську. Ми пропонуємо повний спектр стоматологічних послуг 
+              Ваша надійна стоматологічна клініка в Івано-Франківську. Ми пропонуємо повний спектр стоматологічних послуг 
               з використанням сучасних технологій та досвідчених спеціалістів.
             </p>
             <div className="flex items-center text-white/80 text-sm md:text-base">
