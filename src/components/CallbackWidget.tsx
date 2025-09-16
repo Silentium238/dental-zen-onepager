@@ -70,7 +70,7 @@ const CallbackWidget = () => {
         {/* Форма */}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex gap-2">
-            <div className="flex-1">
+            <div className="flex-[2]">
               <Input
                 type="tel"
                 placeholder="Ваш номер телефону"
@@ -82,7 +82,7 @@ const CallbackWidget = () => {
             <Button
               type="submit"
               disabled={isLoading}
-              className="h-12 px-6 bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-medium transition-all duration-300"
+              className="h-12 px-4 bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-medium transition-all duration-300 flex-shrink-0"
             >
               {isLoading ? "..." : "Зателефонуйте"}
             </Button>

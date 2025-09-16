@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import SharpStar from "@/components/ui/sharp-star";
 import patient1 from "@/assets/patient-1.jpg";
 import patient2 from "@/assets/patient-2.jpg";
 
@@ -45,7 +45,7 @@ const TestimonialsSection = () => {
                 {/* Stars */}
                 <div className="flex justify-center mb-4 md:mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-red-600 text-red-600" />
+                    <SharpStar key={i} className="w-4 h-4 md:w-5 md:h-5 text-red-600" size={20} filled={true} />
                   ))}
                 </div>
 
