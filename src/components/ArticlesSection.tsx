@@ -617,7 +617,7 @@ const ArticlesSection = () => {
                     {article.excerpt}
                   </p>
                   
-                  <div className="flex items-center justify-between text-xs sm:text-sm text-black mb-3 sm:mb-4">
+                  {/* <div className="flex items-center justify-between text-xs sm:text-sm text-black mb-3 sm:mb-4">
                     <div className="flex items-center gap-1 sm:gap-2">
                       <Calendar className="w-3 h-3 sm:w-4 sm:h-4 text-red-600" />
                       <span>{article.date}</span>
@@ -626,7 +626,7 @@ const ArticlesSection = () => {
                       <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-red-600" />
                       <span>{article.readTime}</span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 
                 <Button
