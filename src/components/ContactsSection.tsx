@@ -39,8 +39,8 @@ const ContactsSection = () => {
               </CardHeader>
               <CardContent className="pt-0">
                 <p className="text-black text-sm md:text-base">
-                  <a href="tel:+380441234567" className="hover:text-red-600 transition-colors">
-                    +38 (044) 123-45-67
+                  <a href="tel:+380670001212" className="hover:text-red-600 transition-colors">
+                  +38 (067) 000 12 12
                   </a>
                 </p>
                 <p className="text-xs md:text-sm text-black mt-1">
