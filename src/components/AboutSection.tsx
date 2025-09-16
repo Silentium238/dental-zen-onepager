@@ -8,7 +8,7 @@ const AboutSection = () => {
   const { currentImageSet } = useImageContext();
   
   // Выбираем изображение команды в зависимости от текущего набора
-  const teamImageSrc = currentImageSet === 'simsRoom' ? simsTeam : teamImage;
+  const teamImageSrc = currentImageSet === 'dentalRoom' ? teamImage : teamImage;
 
   return (
     <section id="about" className="py-12 md:py-20 bg-white">
