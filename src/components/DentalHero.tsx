@@ -2,11 +2,13 @@ import heroImage from "@/assets/dental-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useImageContext } from "@/contexts/ImageContext";
+import { useCallbackContext } from "@/contexts/CallbackContext";
 import simsRoom from "@/assets/simsRoom.png";
 import dentalRoom from "@/assets/dental-hero.jpg";
 
 const DentalHero = () => {
   const { currentImageSet } = useImageContext();
+  const { openCallback } = useCallbackContext();
   
   const scrollToNextSection = () => {
     const nextSection = document.getElementById('about');
@@ -48,12 +50,7 @@ const DentalHero = () => {
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
           <Button 
-            onClick={() => {
-              const callbackSection = document.getElementById('callback');
-              if (callbackSection) {
-                callbackSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            onClick={openCallback}
             style={{backgroundColor: 'white'}}
             variant="outline"
             size="lg"

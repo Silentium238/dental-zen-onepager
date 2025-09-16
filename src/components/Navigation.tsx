@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { useImageContext } from "@/contexts/ImageContext";
+import { useCallbackContext } from "@/contexts/CallbackContext";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
   const { toggleImageSet, currentImageSet } = useImageContext();
+  const { openCallback } = useCallbackContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -96,7 +98,7 @@ const Navigation = () => {
             ))}
             
             <button
-              onClick={() => scrollToSection("callback")}
+              onClick={openCallback}
               className="bg-black hover:bg-red-600 text-white w-[180px] lg:w-[200px] xl:w-[210px] h-[38px] tracking-wide rounded-none uppercase text-[14px] lg:text-[16px] xl:text-[18px] font-normal transition-all duration-300 whitespace-nowrap"
             >
               Записатися_
@@ -135,7 +137,7 @@ const Navigation = () => {
               ))}
               <li className="font-medium">
                 <button
-                  onClick={() => scrollToSection("callback")}
+                  onClick={openCallback}
                   className="w-full h-[50px] bg-black text-white hover:bg-red-600 transition-colors"
                 >
                   Записатися_
