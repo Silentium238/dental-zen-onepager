@@ -22,7 +22,7 @@ const FloatingPhoneButton = () => {
 
       {/* Модальное окно с CallbackWidget */}
       <Dialog open={isCallbackOpen} onOpenChange={closeCallback}>
-        <DialogContent className="max-w-md mx-auto bg-white border border-gray-200 shadow-2xl">
+        <DialogContent  style={{borderRadius: '0'}} className="max-w-md mx-auto bg-white border border-gray-200 shadow-2xl">
           <DialogHeader className="pb-4">
             <div className="flex items-center justify-between">
               <DialogTitle className="text-lg font-semibold text-gray-800">

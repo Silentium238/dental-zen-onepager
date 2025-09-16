@@ -58,7 +58,7 @@ const CallbackWidget = () => {
   };
 
   return (
-    <Card className="border border-black shadow-none bg-white rounded-none max-w-md mx-auto">
+    <Card className="border border-black shadow-none bg-white !rounded-none max-w-md mx-auto">
       <CardContent className="p-6">
         {/* Заголовок */}
         <div className="text-center mb-6">
